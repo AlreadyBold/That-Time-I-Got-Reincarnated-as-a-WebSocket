@@ -24,7 +24,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 @Getter
-@DynamicUpdate
 @EntityListeners(AuditingEntityListener.class)
 public class member {
 
