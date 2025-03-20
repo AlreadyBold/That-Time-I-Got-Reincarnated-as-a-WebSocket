@@ -24,11 +24,14 @@ import lombok.NoArgsConstructor;
 @Builder
 @Getter
 @EntityListeners(AuditingEntityListener.class)
-public class member {
+public class Member {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long userId;
+    private long userNo;
+
+    @Column(name="user_id", unique = true)
+    private String userId;
 
     @Column(name ="user_name")
     @NotNull
